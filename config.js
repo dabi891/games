@@ -7,15 +7,15 @@ global.autoReadAll = false
 global.antitags = true
 
 
-global.Owner = ['201095902427']
-global.OwnerNumber = ['201095902427']
-global.ownertag = ['201095902427']
-global.BotName = "❤️𝘉𝘖𝘛 70o0o0da 𝘉𝘌𝘏❤️"
-global.packname = "★حودا بيه يكلب★️"
-global.author = "★01095902427★"
-global.OwnerName = "❤️70o0o0da 𝘉𝘌𝘏❤️️"
-global.BotSourceCode = "https://instagram.com/70o0o0da_12?igshid=YmMyMTA2M2Y="
-global.SupportGroupLink = "https://instagram.com/70o0o0da_12?igshid=YmMyMTA2M2Y="
+global.Owner = ['393515439909']
+global.OwnerNumber = ['393515439909']
+global.ownertag = ['393515439909']
+global.BotName = "❤𝑨𝒂 𝑩𝒃 𝑫𝒅 𝑶𝒐 ♡❤️"
+global.packname = "𝑨𝒂 𝑩𝒃 𝑫𝒅 𝑶𝒐 ♡️"
+global.author = "⍣ عبدو بيحبك 🌚💗 ⍣"
+global.OwnerName = "❤️𝑨𝒂 𝑩𝒃 𝑫𝒅 𝑶𝒐 ♡❤️️"
+global.BotSourceCode = "https://instagram.com/toxic._.abdo?igshid=YmMyMTA2M2Y="
+global.SupportGroupLink = "https://instagram.com/toxic._.abdo?igshid=YmMyMTA2M2Y="
 global.sessionName = "session"
 
 // Prefix //
@@ -27,7 +27,7 @@ global.location = "bihar, India"
 global.reactmoji = "❤️"
 global.themeemoji = "🐤"
 global.vidmenu = { url: 'https://c.tenor.com/YGuLegQWubwAAAPo/miku-nakano-gotoubun-no-hanayome.mp4' }
-global.websitex = "https://instagram.com/70o0o0da_12?igshid=YmMyMTA2M2Y="
+global.websitex = "https://instagram.com/toxic._.abdo?igshid=YmMyMTA2M2Y="
 global.lolhuman = "KaysaS"
 
 

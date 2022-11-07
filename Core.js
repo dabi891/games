@@ -1326,7 +1326,7 @@ const ftroli = {
 
 
     const menulist = `
-    70o0o0da BEH ${pushname} 👋.انا العزيز ${global.BotName}, بوت تم تطويري بواسطة: حوده بيه للانتقال باستخدام واتساب إلى المستوى التالي.
+    𝘈𝘉𝘋𝘖 ${pushname} 👋.انا العزيز ${global.BotName}, بوت تم تطويري بواسطة: عبدو للانتقال باستخدام واتساب إلى المستوى التالي.
         
        「 System Info 」
     
@@ -4864,8 +4864,8 @@ case 'help': case 'الاوامر': case 'menu': case 'اوامر': case 'الق
       
  const helpmenu =`هاي*${pushname}*,
 
-انا *BOT 70o0o0da BEH❤️*, 
-تم تطويري بواسطة *70o0o0da BEH❤️*.
+انا *𝘉𝘖𝘛 𝘈𝘉𝘋𝘖❤️*, 
+تم تطويري بواسطة *𝘈𝘉𝘋𝘖❤️*.
 
 ♠️ البادئة الخاصة بي هي:  ${prefix}
  
@@ -5141,7 +5141,7 @@ case 'help': case 'الاوامر': case 'menu': case 'اوامر': case 'الق
 
 
  『  *${global.BotName}*  』
- *تم التطوير بواسطه:حوده بيه*
+ *تم التطوير بواسطه:عبدو*
 `
 
 
@@ -5172,7 +5172,7 @@ case '':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const needhelpmenu = `مرحبا بك في بوت حوده بيه لظهور قائمه الاوامر اكتب -الاوامر او اضغط علي القائمه البادئه الخاصه بي هي *${prefix}*`
+ const needhelpmenu = `مرحبا بك في بوت عبدو لظهور قائمه الاوامر اكتب -الاوامر او اضغط علي القائمه البادئه الخاصه بي هي *${prefix}*`
      
          let butRun = [
                 {buttonId: `.help`, buttonText: {displayText: 'القائمه✨'}, type: 1}
@@ -5190,11 +5190,11 @@ break
 
 
 
-case 'حوده': case 'محمود':
+case 'عبدو': case 'بودي':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-const txt = `حوده بيحبك🌚❤️ / رقمي للتواصل معايا: https://api.whatsapp.com/send?phone=+201095902427 / انستجرامي: https://instagram.com/70o0o0da_12?igshid=YmMyMTA2M2Y=`
+const txt = `عبدو بيحبك🌚❤️ / رقمي للتواصل معايا: https://api.whatsapp.com/send?phone=+393515439909 `
 const mikuarray= [
             "https://c.tenor.com/SOeIW-QVZvoAAAPo/scared-the-quintessential-quintuplets.mp4",
             "https://c.tenor.com/FDe7lTs0xvMAAAPo/miku-nakano-nakano-miku.mp4",
