@@ -1326,7 +1326,7 @@ const ftroli = {
 
 
     const menulist = `
-    𝘈𝘉𝘋𝘖 ${pushname} 👋.انا العزيز ${global.BotName}, بوت تم تطويري بواسطة: عبدو للانتقال باستخدام واتساب إلى المستوى التالي.
+    ❤️BOT - AL SOLTAN❤️ ${pushname} 👋.انا العزيز ${global.BotName}, بوت تم تطويري بواسطة: السلطان للانتقال باستخدام واتساب إلى المستوى التالي.
         
        「 System Info 」
     
@@ -1491,9 +1491,6 @@ reply(` لا تنسي الانضمام معنا❤️!
 https://chat.whatsapp.com/DHq2KYcAzWG95WTpzVQx3D
 
 *جروب 2*
-https://chat.whatsapp.com/JUngwIYTMVzCxMuismJuOY
-
-*جروب 3*
 https://chat.whatsapp.com/DHq2KYcAzWG95WTpzVQx3D`)
 break
 case 'getsxvdxcmd': {
@@ -3429,7 +3426,7 @@ ${themeemoji} الرابط : ${anu.url}`,
                 Miku.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-     case 'ytmp3': case 'ytaudio': {
+     case 'اغنيه': case 'صوتي': case 'ytmp3': case 'اغنية': {
                 let { yta } = require('./lib/y2mate2')
                 if (!text) throw `Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`
                 let quality = args[1] ? args[1] : '128kbps'
@@ -3439,7 +3436,7 @@ ${themeemoji} الرابط : ${anu.url}`,
                 Miku.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
-            case 'ytmp4': case 'ytvideo': {
+            case 'ytmp4': case 'فيديو': {
                 let { ytv } = require('./lib/y2mate2')
                 if (!text) throw `Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`
                 let quality = args[1] ? args[1] : '360p'
@@ -4864,8 +4861,8 @@ case 'help': case 'الاوامر': case 'menu': case 'اوامر': case 'الق
       
  const helpmenu =`هاي*${pushname}*,
 
-انا *𝘉𝘖𝘛 𝘈𝘉𝘋𝘖❤️*, 
-تم تطويري بواسطة *𝘈𝘉𝘋𝘖❤️*.
+انا *❤️BOT - AL SOLTAN❤️️*, 
+تم تطويري بواسطة *YoUsSeF Al SoLtAn❤*.
 
 ♠️ البادئة الخاصة بي هي:  ${prefix}
  
@@ -5141,7 +5138,7 @@ case 'help': case 'الاوامر': case 'menu': case 'اوامر': case 'الق
 
 
  『  *${global.BotName}*  』
- *تم التطوير بواسطه:عبدو*
+ *تم التطوير بواسطه:السلطان*
 `
 
 
@@ -5172,7 +5169,7 @@ case '':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const needhelpmenu = `مرحبا بك في بوت عبدو لظهور قائمه الاوامر اكتب -الاوامر او اضغط علي القائمه البادئه الخاصه بي هي *${prefix}*`
+ const needhelpmenu = `مرحبا بك في بوت السلطان لظهور قائمه الاوامر اكتب .الاوامر او اضغط علي القائمه لا تنسي وضع *${prefix} قبل كل امر*`
      
          let butRun = [
                 {buttonId: `.help`, buttonText: {displayText: 'القائمه✨'}, type: 1}
@@ -5190,11 +5187,18 @@ break
 
 
 
-case 'عبدو': case 'بودي':
+case 'alive': case 'بوت':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-const txt = `عبدو بيحبك🌚❤️ / رقمي للتواصل معايا: https://api.whatsapp.com/send?phone=+393515439909 `
+const txt = `❄️ مرحــبـا بـك عـزيـزي انــــا مـتـصـل الـان❤،
+
+
+'❄️ كـيــف يـمـكـنـنـي مـسـاعـدتـك❤،
+
+
+'❄️ شـكـرا لــك لـاسـتـخـدامـك❤،
+'❤️BOT - AL SOLTAN❤️`
 const mikuarray= [
             "https://c.tenor.com/SOeIW-QVZvoAAAPo/scared-the-quintessential-quintuplets.mp4",
             "https://c.tenor.com/FDe7lTs0xvMAAAPo/miku-nakano-nakano-miku.mp4",
