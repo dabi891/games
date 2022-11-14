@@ -7,15 +7,15 @@ global.autoReadAll = false
 global.antitags = true
 
 
-global.Owner = ['201288455338']
-global.OwnerNumber = ['201288455338']
-global.ownertag = ['201288455338']
-global.BotName = "❤️BOT - AL SOLTAN❤️"
-global.packname = "YoUsSeF Al SoLtAn ]★"
-global.author = "★ 201288455338 ★"
-global.OwnerName = "YoUsSeF Al SoLtAn❤️"
-global.BotSourceCode = "https://youtube.com/channel/UCf57gAihG_YlH7Rj-gbKuHA"
-global.SupportGroupLink = "https://chat.whatsapp.com/FiRwXZoBuSyLlUZBtNAgx8"
+global.Owner = ['212645830816']
+global.OwnerNumber = ['212645830816']
+global.ownertag = ['212645830816']
+global.BotName = "⚡ 𝐍𝐨𝐞𝐥 𝐒𝐚𝐦𝐚 ⚡"
+global.packname = "🫧𝐍𝐨𝐞𝐥🫧"
+global.author = "⚡𝐁𝐨𝐭⚡"
+global.OwnerName = "☃️ 𝐝𝐚𝐛𝐢 ☃️"
+global.BotSourceCode = "https://www.tiktok.com/@dabi2392?_r"
+global.SupportGroupLink = "https://instagram.com/m_o_s_71?igshid=YmMyMTA2M2Y="
 global.sessionName = "session"
 
 // Prefix //
@@ -58,13 +58,13 @@ global.ntilink = []
 
 
 global.mess = {
-    jobdone: 'تم...',
-    useradmin: 'الامر دا لادمن بس!',
-    botadmin: 'ارفع البوت ادمن الاول.',
-    botowner: 'الميزه دي للمالك بس!',
-    grouponly: 'الميزه دي للجروبات بس!',
-    privateonly: 'الميزه دي في الخاص بس!',
-    botonly: 'الميزه دي للبوت بس!',
+    jobdone: '*「⚡تم..⚡」*',
+    useradmin: '*「⚡هذه الميزة للمشرفين فقط⚡」*',
+    botadmin: '*「⚡أريد الإشراف لتفعيل الأمر ⚡」*',
+    botowner: '*「⚡هذه الميزه فقط للمالك ⚡」*',
+    grouponly: '*「⚡هذه الميزة للبوت فقط⚡」*',
+    privateonly: '*「⚡هذه الميزة في الخاص فقط ⚡」*',
+    botonly: '*「⚡هذه الميزة للبوت فقط⚡」*',
     waiting: 'استني شويه...',
     nolink: 'فين الرابط?',
     error: 'ايرور!',
