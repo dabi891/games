@@ -26,7 +26,7 @@ console.log(color(figlet.textSync('chiku Bot MD', {
 		whitespaceBreak: true
         }), 'yellow'))
 
-console.log(color('\nمرحبًا ، أنا السلطان ، المطور الرئيسي لهذا البوت.\n\nشكرًا لاستخدام: ELGAZAR BOT','aqua'))
+console.log(color('\nمرحبًا ، أنا دابي ، المطور الرئيسي لهذا البوت.\n\nشكرًا لاستخدام: ELGAZAR BOT','aqua'))
 console.log(color('\nافرح تم تشغيل البوت بنجاح✅','aqua'))
 
     let { version, isLatest } = await fetchLatestBaileysVersion()
@@ -45,7 +45,7 @@ store.bind(Miku.ev)
     const callerId = json.content[0].attrs['call-creator']
     if (json.content[0].tag == 'offer') {
     let pa7rick = await Miku.sendContact(callerId, global.owner)
-    Miku.sendMessage(callerId, { text: `حبيبي! سيتم حظرك تلقائيا لاتصالك بي!`}, { quoted : pa7rick })
+    Miku.sendMessage(callerId, { text: `أيها الغامر⚡! سيتم حظرك تلقائيا لاتصالك بي!`}, { quoted : pa7rick })
     await sleep(8000)
     await Miku.updateBlockStatus(callerId, "block")
     }
@@ -109,7 +109,7 @@ Miku.ev.on('groups.update', async pea => {
         Miku.sendMessage(m.chat, { image: wm_fatih, caption: 'تم تعديل معلومات المجموعة الآن يمكن للجميع  تعديل معلومات المجموعة !'})
         } else {
         //Miku.send5ButImg(pea[0].id, `Group Subject has been uhanged To:\n\n*${pea[0].subject}*`, `Miku Bot`, wm_fatih, [])
-        mikutextddfq =`تم تحديث اسم الجروب إلى:\n\n*${pea[0].subject}*`
+        mikutextddfq =`تم تحديث اسم الجروب إلى⚡:\n\n*${pea[0].subject}*`
         Miku.sendMessage(pea[0].id, { image: wm_fatih, caption: mikutextddfq})
       }
      })
@@ -149,14 +149,14 @@ Miku.ev.on('group-participants.update', async (anu) => {
                 if (anu.action == 'add') {
                 let WAuserName = num
                 mikutext = `
-هلا بيك/ي يعمري @${WAuserName.split("@")[0]},
+*أهلا وسهلا بك أيها المغامر/ة🤍☁️* @${WAuserName.split("@")[0]}, 
 
-انا *ᗷOT-AL SOLTAN*, مرحبا بك في ${metadata.subject}.
+*🫧أهلا وسهلا بيك أيها المغامر في بوت 𝐍𝐨𝐞𝐥 𝐒𝐚𝐦𝐚🫧* ${metadata.subject}.
 
-*وصف الجروب:*
+*وصـف الـمـجموعة🤍🕊️:*
 ${metadata.desc}
 
-نورت/ي الجروب يقمر🌚❤️
+*أتمنى لك يوما سعيدا أيها المغامر/ة🌫️🤍*
 `
 
     let buttonMessage = {
@@ -170,9 +170,10 @@ Miku.sendMessage(anu.id, buttonMessage)
                 } else if (anu.action == 'remove') {
                 	let WAuserName = num
                     mikutext = `
-مع السلامه 👋, @${WAuserName.split("@")[0]},
+*الا لقاء أيها المغامر/ة العظيم*⚡👋🏻, @${WAuserName.split("@")[0]},
 
-مع السلامه اللي يغور يجي مكانو طابور😍, واللي بعنا خسر دلعنا😂💔!
+أتمنى لك أيام سعيدة وأنك ستمتعت في مجموعة
+,وأن تعود لنا بسلامة وأن يحفظك لله طريق سلامة🎻🤍!
 `
 
     let buttonMessage = {
