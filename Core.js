@@ -2231,7 +2231,7 @@ await Miku.sendMessage(m.chat, { delete: key })
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- Miku.sendMessage(from, {text: `\`\`\`*「  Warning/تحذير  」*\`\`\`\n\nتم تفعيل منع الروابط!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ Miku.sendMessage(from, {text: `\`\`\`*「  ⚡Warning/تحذير⚡  」*\`\`\`\n\nتم تفعيل منع الروابط!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
  if (!antiWame) return replay('تم إلغاء تنشيطه بالفعل')
  let off = nttoxic.indexOf(from)
@@ -3398,7 +3398,7 @@ reply("Error link!")
 break
 
 case 'play2': case 'تشغيل': {
-                if (!text) throw `مثال : ${prefix + command} حلقه انمي ناروتو`
+                if (!text) throw `مثال : ${prefix + command} حلقه انمي بليتش🤍☕ `
                 let yts = require("yt-search")
                 let search = await yts(text)
                 let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
@@ -3409,16 +3409,16 @@ case 'play2': case 'تشغيل': {
                 let buttonMessage = {
                     image: { url: anu.thumbnail },
                     caption: `
-${themeemoji} العنوان : ${anu.title}
-${themeemoji} تحويلة : Search
-${themeemoji} ايدي : ${anu.videoId}
-${themeemoji} مدة : ${anu.timestamp}
-${themeemoji} المشاهدات : ${anu.views}
-${themeemoji} تحميل في : ${anu.ago}
-${themeemoji} مؤلف : ${anu.author.name}
-${themeemoji} القناه : ${anu.author.url}
-${themeemoji} الوصف : ${anu.description}
-${themeemoji} الرابط : ${anu.url}`,
+${themeemoji} العنوان📺 : ${anu.title}
+${themeemoji} تحويلة 🎛️: Search
+${themeemoji} ايدي 🔢: ${anu.videoId}
+${themeemoji} مدة 🎞️: ${anu.timestamp}
+${themeemoji} المشاهدات 📟: ${anu.views}
+${themeemoji} تحميل في 📡: ${anu.ago}
+${themeemoji} مؤلف 👤: ${anu.author.name}
+${themeemoji} القناه 📼: ${anu.author.url}
+${themeemoji} الوصف 🎥: ${anu.description}
+${themeemoji} الرابط 🖇️: ${anu.url}`,
                     footer: Miku.user.name,
                     buttons: buttons,
                     headerType: 4
@@ -3486,8 +3486,8 @@ if (isBanChat) return reply(mess.bangc)
          reply(mess.waiting)
          let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
          let random = anu[Math.floor(Math.random() * anu.length)]
-         Miku.sendMessage(m.chat, { image: { url: random.male }, caption: `ولد🙎🏻‍♂️` }, { quoted: m })
-         Miku.sendMessage(m.chat, { image: { url: random.female }, caption: `️بنت🙎‍♀️` }, { quoted: m })
+         Miku.sendMessage(m.chat, { image: { url: random.male }, caption: `*مغامر*🧝🏻‍♂️ ` }, { quoted: m })
+         Miku.sendMessage(m.chat, { image: { url: random.female }, caption: `️*مغامرة*🧝🏻‍♀️` }, { quoted: m })
      }
  break
 
@@ -3571,7 +3571,7 @@ case 'pinterest': case 'pin': {
 case 'زرف': case 'take': case 'سرقة': case 'سرقه':{
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-if (!args.join(" ")) return reply(`اكتب الامر ويليه حقوق الملصق`)
+if (!args.join(" ")) return reply(`*أكتب الأمر وياليه الحقوق من فضلك*🤍🕊️`)
 const swn = args.join(" ")
 const pcknm = swn.split("|")[0];
 const atnm = swn.split("|")[1];
@@ -3583,12 +3583,12 @@ let media = await quoted.download()
 let encmedia = await Miku.sendImageAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
 await fs.unlinkSync(encmedia)
 } else if (/video/.test(mime)) {
-if ((quoted.msg || quoted).seconds > 11) return reply('الحد الأقصى المسموح به هو 10 ثواني!')
+if ((quoted.msg || quoted).seconds > 11) return reply('*الحد الأقصى المسموح به 10 ثواني يا صديقي/تي*⚡🧭')
 let media = await quoted.download()
 let encmedia = await Miku.sendVideoAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
 await fs.unlinkSync(encmedia)
 } else {
-reply(`إرسال صورة او فيديو وقم بالرد وكتابه الامر ${prefix + command}\nيُسمح بمدة الفيديو من 1 إلى 9 ثوانٍ!`)
+reply(`*إرسال صورة او فيديو وقم بالرد وكتابه الامر ${prefix + command}\nيُسمح بمدة الفيديو من 1 إلى 9 ثوانٍ🕊⚡*`)
 }
 }
 break
@@ -3620,12 +3620,12 @@ case 'استيكر': case 'sticker': case 's': case 'ملصق': {
  let encmedia = await Miku.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
  await fs.unlinkSync(encmedia)
  } else if (/video/.test(mime)) {
- if ((quoted.msg || quoted).seconds > 11) return reply('حد اقصي10ثواني!')
+ if ((quoted.msg || quoted).seconds > 11) return reply('*الحد الأقصى المسموح به 10 ثواني يا صديقي/تي*⚡🧭')
  let media = await quoted.download()
  let encmedia = await Miku.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
  await fs.unlinkSync(encmedia)
  } else {
- reply(`إرسال صورة او فيديو وقم بالرد وكتابه الامر ${prefix + command}\nيُسمح بمدة الفيديو من 1 إلى 9 ثوانٍ`)
+ reply(`*إرسال صورة او فيديو وقم بالرد وكتابه الامر ${prefix + command}\nيُسمح بمدة الفيديو من 1 إلى 9 ثوانٍ*🕊⚡`)
  }
  }
  break
@@ -3668,11 +3668,11 @@ if (!m.isGroup) return replay(`${mess.grouponly}`)
 let member = participants.map(u => u.id)
 let orang = member[Math.floor(Math.random() * member.length)]
 let jodoh = member[Math.floor(Math.random() * member.length)]
-let jawab = `@${orang.split('@')[0]} 「 معلش زوجناكم لأنكم تصلحون لبعض 🤡 」◣ @${jodoh.split('@')[0]}
-「 الي يشوفهم مناسبين لبعض زيي يضغط يب 🤡 」◣`
+let jawab = `@${orang.split('@')[0]} 「 معلش زوجناكم لأنكم تصلحو لبعض😂 💞 」◣ @${jodoh.split('@')[0]}
+「 الي يشوفهم مناسبين لبعض زيي يضغط يب 😂💖 」◣`
 let menst = [orang, jodoh]
 let buttons = [
-{ buttonId: '「 يب هم مناسبين لبعض😂🤡 」◣', buttonText: { displayText: '「 يب هم مناسبين لبعض😂🤡 」◣' }, type: 1 }
+{ buttonId: '「 يب هم مناسبين لبعض😂👍 」◣', buttonText: { displayText: '「 يب هم مناسبين لبعض😂👍 」◣' }, type: 1 }
 ]
 await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: menst})
 }
@@ -3685,11 +3685,11 @@ if (!m.isGroup) return replay(`${mess.grouponly}`)
 let member = participants.map(u => u.id)
 let orang = member[Math.floor(Math.random() * member.length)]
 let jodoh = member[Math.floor(Math.random() * member.length)]
-let jawab = `@${orang.split('@')[0]} 「 معلش طلقناكم لأنكم لا تصلحون لبعض 💔 」◣ @${jodoh.split('@')[0]}
-「 الي يشوفهم مش مناسبين لبعض زيي يضغط يب 🤡 」◣`
+let jawab = `@${orang.split('@')[0]} 「 معلش طلقناكم لأنكم لا تصلحون لبعض 😔💔 」◣ @${jodoh.split('@')[0]}
+「 الي يشوفهم مش مناسبين لبعض زيي يضغط يب 💔😔 」◣`
 let menst = [orang, jodoh]
 let buttons = [
-{ buttonId: '「 يب هم مش مناسبين لبعض 💔 」◣', buttonText: { displayText: '「 يب هم مش مناسبين لبعض 💔 」◣' }, type: 1 }
+{ buttonId: '「 يب هم مش مناسبين لبعض 😂💔 」◣', buttonText: { displayText: '「 يب هم مش مناسبين لبعض 😂💔 」◣' }, type: 1 }
 ]
 await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: menst})
 }
@@ -3706,7 +3706,7 @@ let jawab = `👫 رفيق الروح
 @${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
 let ments = [me, jodoh]
 let buttons = [
-{ buttonId: '❤️', buttonText: { displayText: 'كن توأم روحي❤️' }, type: 1 }
+{ buttonId: '❤️', buttonText: { displayText: 'كن توأم روحي🕊❤️' }, type: 1 }
 ]
 await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
 }
@@ -3721,11 +3721,11 @@ if (!m.isGroup) return replay(`${mess.grouponly}`)
 let member = participants.map(u => u.id)
 let me = m.sender
 let jodoh = member[Math.floor(Math.random() * member.length)]
-let jawab = ` تم فراقكم 🙂💔
+let jawab = ` تم فراقكم 😭💔
 @${me.split('@')[0]} 💔 @${jodoh.split('@')[0]}`
 let ments = [me, jodoh]
 let buttons = [
-{ buttonId: '💔', buttonText: { displayText: 'فارقني 💔️' }, type: 1 }
+{ buttonId: '💔', buttonText: { displayText: 'فارقني 😔💔️' }, type: 1 }
 ]
 await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
 }
@@ -3734,7 +3734,7 @@ break
 case 'نسبه-حبك':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-				if (!text) return replay(`اعمل منشن علي شخص مثال : ${prefix + command} @Elgazar`)
+				if (!text) return replay(`🕊❤اعمل منشن علي شخص مثال : ${prefix + command} @Elgazar`)
 					const gan = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const teng = gan[Math.floor(Math.random() * gan.length)]
 Miku.sendMessage(from, { text: `*${command}*\n\nالاسم : ${q}\nالاجابه : *${teng}%*` }, { quoted: m })
@@ -3743,7 +3743,7 @@ Miku.sendMessage(from, { text: `*${command}*\n\nالاسم : ${q}\nالاجاب�
 case 'نسبه-جمالك':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-				if (!text) return replay(`اعمل منشن علي شخص مثال : ${prefix + command} @Elgazar`)
+				if (!text) return replay(`🕊❤اعمل منشن علي شخص مثال : ${prefix + command} @Elgazar`)
 					const can = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const tik = can[Math.floor(Math.random() * can.length)]
 Miku.sendMessage(from, { text: `*${command}*\n\nالاسم : ${q}\nالجواب : *${tik}%*` }, { quoted: m })
@@ -3760,7 +3760,7 @@ case 'awesomecheck':
                       case 'نسبه-الكره':
                         if (isBan) return reply(mess.banned)
                         if (isBanChat) return reply(mess.bangc)
-				if (!text) return replay(`اعمل منشن علي شخص مثال : ${prefix + command} @Elgazar`)
+				if (!text) return replay(`🕊❤اعمل منشن علي شخص مثال : ${prefix + command} @Elgazar`)
 					const sangeh = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const sange = sangeh[Math.floor(Math.random() * sangeh.length)]
 Miku.sendMessage(from, { text: `*${command}*\n\nالاسم : ${q}\nالجواب : *${sange}%*` }, { quoted: m })
@@ -3770,8 +3770,8 @@ Miku.sendMessage(from, { text: `*${command}*\n\nالاسم : ${q}\nالجواب 
 case 'شخصيتك':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-					if (!text) return replay(`اعمل منشن علي شخص, مثال : ${prefix + command} @Elgazar`)
-					const Mikutttt =['زفت','واطي','غبي','مطيع','غلبان','جدع','طيب','حبوب','جميل','حمار','محترم','شرموط']
+					if (!text) return replay(`🕊❤اعمل منشن علي شخص, مثال : ${prefix + command} @Elgazar`)
+					const Mikutttt =['زفت','حزين','غبي','رجل','فقير','مشغول على دوام','طيب القلب','حقود','جميل','حمار','محترم','لطيف']
 					const taky = Mikutttt[Math.floor(Math.random() * Mikutttt.length)]
 					Miku.sendMessage(from, { text: `التحقق من الشخصية : ${q}\nالاجابه : *${taky}*` }, { quoted: m })
 				     break
@@ -3984,7 +3984,7 @@ if (!text) return reply(mess.linkm)
 if (!isUrl(args[0]) && !args[0].includes('mediafire.com')) return reply(`The link you provided is invalid`)
 const baby1 = await mediafireDl(text)
 if (baby1[0].size.split('MB')[0] >= 999) return reply('*File Over Limit* '+util.format(baby1))
-const result4 = `「  *التحميل من ميديافاير*  」
+const result4 = `「  ⚡*التحميل من ميديافاير*⚡  」
 				
 *Name* : ${baby1[0].nama}
 *Size* : ${baby1[0].size}
@@ -4190,7 +4190,7 @@ reply(mess.waiting)
     ]
   let xx1button3Messages = {
    image: {url:waifudd.data.url},
-   caption:  `اي خدمه يروحي🌚♥...`,
+   caption:  `*تم تجهيز طلبك سيدي/تي..🤍*`,
   buttons: xxhnekobot,
   headerType: 1
   }      
@@ -4210,7 +4210,7 @@ reply(mess.waiting)
         ]
       let button112ssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `اي خدمه يروحي🌚♥...`,
+       caption:  `*تم تجهيز طلبك سيدي/تي..🤍*`,
       footer: `${global.BotName}`,
       buttons: wbuttsss,
       headerType: 4
@@ -4257,7 +4257,7 @@ reply(mess.waiting)
         ]
       let buttonssMessage = {
        image: {url:waifud.data.url},
-       caption:  `اي خدمه يروحي🌚♥...`,
+       caption:  `*تم تجهيز طلبك سيدي/تي..🤍*`,
       footer: `${global.BotName}`,
       buttons: wbutsss,
       headerType: 4
@@ -4282,7 +4282,7 @@ reply(mess.waiting)
         ]
       let buttonssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `اي خدمه يروحي🌚♥...`,
+       caption:  `*تم تجهيز طلبك سيدي/تي..🤍*`,
       footer: `${global.BotName}`,
       buttons: wbuttsss,
       headerType: 4
@@ -4564,7 +4564,7 @@ var wbutsss = [
          ]
       let buttonzMessage = {
       image: {url:ud.data.url},
-       caption:  `اي خدمه يروحي🌚♥...`,
+       caption:  `*تم تجهيز طلبك سيدي/تي..🤍*`,
       footer: `${global.BotName}`,
           buttons: wbutsss,
      headerType: 4
@@ -4585,7 +4585,7 @@ case 'awoo':
     ]
   let button1Messages = {
    image: {url:waifudd.data.url},
-   caption:  `اي خدمه يروحي🌚♥...`,
+   caption:  `*تم تجهيز طلبك سيدي/تي..🤍*`,
    footer: `${global.BotName}`,
   buttons: wbuttsss,
   headerType: 2
@@ -4630,7 +4630,7 @@ case 'anime': case 'انمي':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
-	    if(!q) return reply(`يرجى تقديم مصطلح البحث!\n\n*مثال:* ${prefix}انمي naruto`)
+	    if(!q) return reply(`يرجى تقديم مصطلح البحث!\n\n*مثال:* ${prefix}انمي Bleach`)
 reply(mess.waiting)							
 const { Anime } =require("@shineiichijo/marika")
     const client = new Anime();
@@ -4680,7 +4680,7 @@ case 'مانجا':
 reply(mess.waiting)							
 const { Manga } =require("@shineiichijo/marika")
 const manga = new Manga();
-if(!q) return reply(`اكتب اسم شخصيه انمي للبحث!\n\n_مثال:_ ${prefix}مانجا naruto`)
+if(!q) return reply(`اكتب اسم شخصيه انمي للبحث!\n\n_مثال:_ ${prefix}مانجا Bleach`)
 let srh = await manga.searchManga(q)
     let mang = `*Title:* ${srh.data[0].title}\n`;
     mang += `*Status:* ${srh.data[0].status}\n`;
@@ -4721,7 +4721,7 @@ reply(mess.waiting)
     ]
         let button4Messagess = {
         image: {url:waifuddd.data.url},
-        caption: 'أكثر من وايفي سوف يدمر لايفو الخاص بك بالتأكيد!',
+        caption: '*تم تجهيز طلبك سيدي/تي..🤍*',
         buttons: wbuttsssr,
         headerType: 4
          }     
@@ -4742,7 +4742,7 @@ reply(mess.waiting)
     ]
         let buttonMessagessf = {
         image: {url:waifuddd.data.url},
-        caption: 'اي خدمه يروحي🌚❤️...',
+        caption: '*تم تجهيز طلبك سيدي/تي..🤍*',
         buttons: wbuttsssr,
         headerType: 2
          }     
@@ -4764,7 +4764,7 @@ reply(mess.waiting)
     ]
         let buttonMessagessfgr = {
         image: {url:waifuddd.data.url},
-        caption: 'لا تكن لولي كون!',
+        caption: '*تم تجهيز طلبك سيدي/تي..🤍*',
         buttons: wbuttsssr,
         headerType: 2
          }     
@@ -4847,7 +4847,7 @@ displayText: 'مطور البوت👤',
 id: '.owner'
 }
 }]
-let txt = `「 *${global.OwnerName}'شير للكل* 」\n\n${text}`
+let txt = `「 ⚡*${global.OwnerName}'شير للكل*⚡ 」\n\n${text}`
 Miku.send5ButImg(yoi, txt, `${global.BotName}`, BotLogo, btn, Thumb)
 }
 replay('تم ارسال البث بنجاح !')
