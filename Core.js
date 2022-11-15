@@ -2861,7 +2861,7 @@ case 'لفيديو': case 'tovideo': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.quoted) return reply('رد علي صوره')
- if (!/webp/.test(mime)) return reply(`اتمنا منك الرد على الملصق🕊❤*${prefix + command}*`)
+ if (!/webp/.test(mime)) return reply(`اتمنا منك الرد على الملصق🕊🤍*${prefix + command}*`)
  reply(mess.waiting)
  let { webp2mp4File } = require('./lib/uploader')
  let media = await Miku.downloadAndSaveMediaMessage(quoted)
@@ -2874,8 +2874,8 @@ case 'لفيديو': case 'tovideo': {
 case 'لصوتي': case 'toaudio': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`رد علي الفيديو اللي هتحولو لصوت واكتب الامر ${prefix + command}`)
- if (!m.quoted) return reply(`رد علي الفيديو اللي هتحولو لصوت واكتب الامر ${prefix + command}`)
+ if (!/video/.test(mime) && !/audio/.test(mime)) return reply(` *أتمنا منك رد على الفيديو الذي تريد تحويله*🕊️🤍 ${prefix + command}`)
+ if (!m.quoted) return reply(`*أتمنا منك رد على الفيديو الذي تريد تحويله*🕊️🤍 ${prefix + command}`)
  reply(mess.waiting)
  let media = await quoted.download()
  let { toAudio } = require('./lib/converter')
@@ -2903,7 +2903,7 @@ case 'togif': case 'لمتحرك': case 'متحركه':{
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.quoted) return reply('رد علي صوره')
- if (!/webp/.test(mime)) return reply(`رد علي استيكر واكتب الامر *${prefix + command}*`)
+ if (!/webp/.test(mime)) return reply(`*أتمنا منك رد على الملصق وكتابة الأمر*🕊️🤍 *${prefix + command}*`)
  reply(mess.wait)
  let { webp2mp4File } = require('./lib/uploader')
  let media = await Miku.downloadAndSaveMediaMessage(quoted)
@@ -2951,7 +2951,7 @@ case 'translate': case 'trans': {
 case 'image': case 'صوره': case 'صورة':{
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-if (!args[0]) return reply("اكتب اسم الصوره اللي تبحث عنها!")
+if (!args[0]) return reply("🕊🤍اكتب اسم الصوره اللي تبحث عنها!")
 let gis = require('g-i-s')
 gis(args.join(" "), async (error, result) => {
 n = result
@@ -2961,7 +2961,7 @@ let buttons = [
 ]
 let buttonMessage = {
 image: { url: images },
-caption: `「 *محرك بحث جوجل* 」
+caption: `「 ⚡*محرك بحث جوجل*⚡ 」
 
 _Search Term_ : ${text}
 _Media Url_ : ${images}`,
@@ -2982,7 +2982,7 @@ case 'google': case 'جوجل': {
  if (!args[0]) return reply(`مثال: ${prefix + command} <استفسار>\nالاستخدامات : ${prefix + command} ما هو الحب`)
  let google = require('google-it')
  google({'query': args.join(" ")}).then(res => {
- let teks = `「 *محرك بحث جوجل* 」\n\n*مصطلح البحث:* ${text}\n\n\n`
+ let teks = `「 ⚡*محرك بحث جوجل*⚡ 」\n\n*مصطلح البحث:* ${text}\n\n\n`
  for (let g of res) {
  teks += `*العنوان* : ${g.title}\n\n`
  teks += `*الوصف* : ${g.snippet}\n\n`
@@ -3001,7 +3001,7 @@ case 'google': case 'جوجل': {
  hx.igdl(args[0]).then(async(resed) => {
  ini_anu = []
  anu_list = []
- textbv = `「 *تنزيل انستجرام* 」\n\nاسم المستخدم : ${resed.user.username ? resed.user.name : "undefined"}\nالمتابعين : ${resed.user.followers}`
+ textbv = `「 ⚡*تنزيل انستجرام*⚡ 」\n\nاسم المستخدم : ${resed.user.username ? resed.user.name : "undefined"}\nالمتابعين : ${resed.user.followers}`
  urut = 1
  for (let i = 0; i < resed.medias.length; i++) {
  ini_anu.push({
@@ -3096,7 +3096,7 @@ if (isBanChat) return reply(mess.bangc)
              if (!text) return reply(`Please provide link!`)
                 if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(`*Invalid link!*`)
                 xfarrapi.Twitter(`${text}`).then(async (data) => {                    
-                    let txt = `「 *تنزيل تويتر* 」\n\n`
+                    let txt = `「 ⚡*تنزيل تويتر*⚡ 」\n\n`
                     txt += `*العنوان :* ${data.title}\n`
                     txt += `*الجوده :* ${data.medias[1].quality}\n`
                     txt += `*وسائل الاعلام :* ${data.medias[1].extension}\n`
@@ -3167,7 +3167,7 @@ case 'twddlxx': {
  ]
  let buttonMessage = {
  video: {url:args[0]},
- caption: "اي خدمه يروحي🌚♥...",
+ caption: "*تم تجهيز طلبك سيدي/تي..🤍*",
  footer: `${pushname}`,
  buttons: buttons,
  headerType: 4,
@@ -3184,7 +3184,7 @@ case 'twddlxx': {
                  if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`Invalid link!`)
              let bocil = require('@bochilteam/scraper')  
                  bocil.facebookdlv2(`${text}`).then(async (data) => {                   
-                     let txt = `「 *تنزيل فيسبوك* 」\n\n`
+                     let txt = `「 ⚡*تنزيل فيسبوك*⚡ 」\n\n`
                      txt += `*العنوان :* ${data.title}\n`
                      txt += `*الجوده :* ${data.result[0].quality}\n`
                      txt += `*الوصف:* ${data.description}\n`
@@ -3339,19 +3339,19 @@ case 'play': case 'شغل': case 'song': {
                     let buttonMessage = {
                         image: { url: anu.thumbnail},
                         caption: `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-    ⟮*◉بحث يوتيوب◉*⟯ 
+    *⟮📡 بحث يوتيوب 📡⟯*
    
 0.02━◉━━━━━━━━━━━━3.26
       🔂   ⏪   ⏸️     ⏩  🎵
 
-    عنوان : ${anu.title}
-    ايدي : ${anu.videoId}
-    الوصف : ${anu.timestamp}
-    المشاهدات : ${anu.views}
-    التحميل : ${anu.ago}
-    مؤلف : ${anu.author.name}
-    القناه : ${anu.author.url}
-    الرابط : ${anu.url}`,
+   | عنوان 📺: ${anu.title}
+   | ايدي 🎚️: ${anu.videoId}
+   | الوصف ☕: ${anu.timestamp}
+   | المشاهدات 📟: ${anu.views}
+   | التحميل 🧰: ${anu.ago}
+   | مؤلف 👤: ${anu.author.name}
+   | القناه 🎥: ${anu.author.url}
+   | الرابط 🖇️: ${anu.url}`,
                         footer: `${BotName}`,
                         buttons: buttons,
                         headerType: 4
@@ -3369,14 +3369,14 @@ if (!args[0]) return reply(mess.nolink)
 try {
 hx.youtube(args[0]).then(async(res) => {
 textyt = `▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-    ⟮*◉بحث يوتيوب◉*⟯ 
+    *⟮📡 بحث يوتيوب 📡⟯*
    
 0.02━◉━━━━━━━━━━━━3.26
       🔂   ⏪   ⏸️     ⏩  🎵
-عنوان : ${res.title}
-الحجم : ${res.size}
-الجوده : ${res.quality}
-_حدد الفيديو أو الصوت وانتظر بعض الوقت_`
+عنوان 📺: ${res.title}
+الحجم 🎞: ${res.size}
+الجوده 📹: ${res.quality}
+_*أتمنا منك منك أيها المغامر/ة أنت تختاري صوت أو فيديو وإنتضار قليلا احبكم*🤍🌫️_`
 let buttons = [
 {buttonId: `.ytmp4 ${res.link}`, buttonText: {displayText: '► فيديو'}, type: 1},
 {buttonId: `.ytmp3 ${res.link}`, buttonText: {displayText: '♫ صوتي'}, type: 1}
